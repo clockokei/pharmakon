@@ -126,24 +126,38 @@
     
 //그룹과 인원추가를 만지고 싶다면 여기를 수정하세요
 const MOCK_GROUPS = [
-    { id: 'group1', name: '에이 팀', icon: 'A' },
-    { id: 'group2', name: '비 팀', icon: 'B' },
-    { id: 'group3', name: '씨 팀', icon: 'C' },
-    { id: 'group4', name: '디 팀', icon: 'D' },
-    { id: 'group5', name: '이 팀', icon: 'E' },
+    { id: 'group1', name: '런던 거리', icon: '🌃' },
+    { id: 'group2', name: '약국', icon: '💊' },
+    { id: 'group3', name: '실험실', icon: '⚗️' },
+    { id: 'group4', name: '서재', icon: '📚' },
+    { id: 'group5', name: '문 안', icon: '🚪' },
 ];
 
 const MOCK_USERS = [
-    { uid: 'user-001', name: '유저 1', handle: 'user1', color: 'bg-gray-500', profile: '1', group: 'group1' },
-    { uid: 'user-002', name: '유저 2', handle: 'user2', color: 'bg-gray-500', profile: '2', group: 'group1' },
-    { uid: 'user-003', name: '유저 3', handle: 'user3', color: 'bg-gray-500', profile: '3', group: 'group2' },
-    { uid: 'user-004', name: '유저 4', handle: 'user4', color: 'bg-gray-500', profile: '4', group: 'group2' },
-    { uid: 'user-005', name: '유저 5', handle: 'user5', color: 'bg-gray-500', profile: '5', group: 'group3' },
-    { uid: 'user-006', name: '유저 6', handle: 'user6', color: 'bg-gray-500', profile: '6', group: 'group3' },
-    { uid: 'user-007', name: '유저 7', handle: 'user7', color: 'bg-gray-500', profile: '7', group: 'group4' },
-    { uid: 'user-008', name: '유저 8', handle: 'user8', color: 'bg-gray-500', profile: '8', group: 'group4' },
-    { uid: 'user-009', name: '유저 9', handle: 'user9', color: 'bg-gray-500', profile: '9', group: 'group5' },
-    { uid: 'user-010', name: '유저 10', handle: 'user10', color: 'bg-gray-500', profile: '10', group: 'group5' },
+    { uid: 'user-001', name: 'John Doe', handle: 'user1', color: 'bg-gray-500', profile: '1', group: 'group1' },
+    { uid: 'user-002', name: 'James Hunt', handle: 'user1', color: 'bg-gray-500', profile: '2', group: 'group1' },
+    { uid: 'user-001', name: 'Henry Jekyll', handle: 'user2', color: 'bg-gray-500', profile: '3', group: 'group1' },
+    { uid: 'user-002', name: 'Edward Hyde', handle: 'user2', color: 'bg-gray-500', profile: '4', group: 'group1' },
+    
+    { uid: 'user-003', name: 'John Doe', handle: 'user1', color: 'bg-gray-500', profile: '5', group: 'group2' },
+    { uid: 'user-004', name: 'James Hunt', handle: 'user1', color: 'bg-gray-500', profile: '6', group: 'group2' },
+    { uid: 'user-003', name: 'Henry Jekyll', handle: 'user2', color: 'bg-gray-500', profile: '7', group: 'group2' },
+    { uid: 'user-004', name: 'Edward Hyde', handle: 'user2', color: 'bg-gray-500', profile: '8', group: 'group2' },
+    
+    { uid: 'user-005', name: 'John Doe', handle: 'user1', color: 'bg-gray-500', profile: '9', group: 'group3' },
+    { uid: 'user-006', name: 'James Hunt', handle: 'user1', color: 'bg-gray-500', profile: '10', group: 'group3' },
+    { uid: 'user-005', name: 'Henry Jekyll', handle: 'user2', color: 'bg-gray-500', profile: '11', group: 'group3' },
+    { uid: 'user-006', name: 'Edward Hyde', handle: 'user2', color: 'bg-gray-500', profile: '12', group: 'group3' },
+    
+    { uid: 'user-007', name: 'John Doe', handle: 'user1', color: 'bg-gray-500', profile: '13', group: 'group4' },
+    { uid: 'user-008', name: 'James Hunt', handle: 'user1', color: 'bg-gray-500', profile: '14', group: 'group4' },
+    { uid: 'user-007', name: 'Henry Jekyll', handle: 'user2', color: 'bg-gray-500', profile: '15', group: 'group4' },
+    { uid: 'user-008', name: 'Edward Hyde', handle: 'user2', color: 'bg-gray-500', profile: '16', group: 'group4' },
+    
+    { uid: 'user-009', name: 'John Doe', handle: 'user1', color: 'bg-gray-500', profile: '17', group: 'group5' },
+    { uid: 'user-010', name: 'James Hunt', handle: 'user1', color: 'bg-gray-500', profile: '18', group: 'group5' },
+    { uid: 'user-009', name: 'Henry Jekyll', handle: 'user2', color: 'bg-gray-500', profile: '19', group: 'group5' },
+    { uid: 'user-010', name: 'Edward Hyde', handle: 'user2', color: 'bg-gray-500', profile: '20', group: 'group5' },
 ];
     
     const EXAMPLE_IMAGE_URL = 'https://i.imgur.com/KDTgHmT.png';
