@@ -126,8 +126,77 @@
     
 //그룹과 인원추가를 만지고 싶다면 여기를 수정하세요
 const MOCK_GROUPS = [
-    { id: 'group1', name: '에이 팀', icon: '💊' },
-    { id: 'group2', name: '비 팀', icon: '💉' },
+    { id: 'group1', name: '약사', icon: '💊' },
+    { id: 'group2', name: '의사   const { useState, useEffect, useCallback, useMemo, useRef } = React;
+    
+    // 유틸리티 함수: SHA-256 해시 생성 (비밀번호 보안용)
+    const sha256 = async (str) => {
+        const buffer = new TextEncoder().encode(str);
+        const hash = await crypto.subtle.digest('SHA-256', buffer);
+        const hex = Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+        return hex;
+    };
+    
+    // Lucide 아이콘 정의
+    const Lucide = window.LucideReact || {};
+    
+    const LogOut = Lucide.LogOut || '🚪'; 
+    const MessageSquare = Lucide.MessageSquare || '💬'; 
+    const Loader = Lucide.Loader || '↻'; 
+    const AlertTriangle = Lucide.AlertTriangle || '⚠️';
+    const ChevronDown = Lucide.ChevronDown || '▼';
+    const ChevronUp = Lucide.ChevronUp || '▲';
+    const Home = Lucide.Home || '🏠';
+    const Heart = Lucide.Heart || '❤️';
+    const Bookmark = Lucide.Bookmark || '☆';
+    const RepeatIcon = Lucide.Repeat2 || '⇆';
+    const Image = Lucide.Image || '🖼️';
+    const X = Lucide.X || '❌';
+    const ArrowLeft = Lucide.ArrowLeft || '←';
+    const Bell = Lucide.Bell || '🔔';
+    const Sun = Lucide.Sun || '☼';
+    const Moon = Lucide.Moon || '☽';
+
+//여기를 수정하세요
+    const hardcodedFirebaseConfig = {
+  apiKey: "AIzaSyALSBi9tkOoDGkVoIaj5Um9y_j1FL4C2bE",
+  authDomain: "pharmakon-526f8.firebaseapp.com",
+  projectId: "pharmakon-526f8",
+  storageBucket: "pharmakon-526f8.firebasestorage.app",
+  messagingSenderId: "345126374941",
+  appId: "1:345126374941:web:bc6477493503b8a56940f4",
+  measurementId: "G-0NY4CQDTHF"
+};
+    
+    const ACTIVE_USER_STORAGE_KEY = 'miniTwitterActiveUser';
+    const LAST_CHECKED_NOTIFICATIONS_KEY = 'miniTwitterLastCheckedNotifications';
+    const DARK_MODE_STORAGE_KEY = 'miniTwitterDarkMode';
+
+    let firebaseConfig, initialAuthToken, canvasAppId;
+    
+    if (Object.keys(hardcodedFirebaseConfig).length > 0 && hardcodedFirebaseConfig.apiKey !== "YOUR_API_KEY") {
+        firebaseConfig = hardcodedFirebaseConfig;
+        canvasAppId = hardcodedFirebaseConfig.projectId;
+        initialAuthToken = null;
+    } else if (typeof window.__firebase_config !== 'undefined') {
+        firebaseConfig = JSON.parse(window.__firebase_config);
+        canvasAppId = typeof window.__app_id !== 'undefined' ? window.__app_id : firebaseConfig.projectId;
+        initialAuthToken = typeof window.__initial_auth_token !== 'undefined' ? window.__initial_auth_token : null;
+    } else {
+        firebaseConfig = { apiKey: 'MOCK_API_KEY', authDomain: 'mock-project.firebaseapp.com', projectId: 'mock-project' };
+        canvasAppId = 'default-app-id';
+        initialAuthToken = null;
+    }
+
+    const { initializeApp, getAuth, signInWithCustomToken, signInAnonymously, onAuthStateChanged, signOut,
+            getFirestore, collection, query, orderBy, onSnapshot, addDoc, serverTimestamp, doc, deleteDoc, updateDoc, getDoc, setDoc } = window.firebase || {};
+
+    const getInitialActiveUser = () => localStorage.getItem(ACTIVE_USER_STORAGE_KEY);
+    
+//그룹과 인원추가를 만지고 싶다면 여기를 수정하세요
+const MOCK_GROUPS = [
+    { id: 'group1', name: '약사', icon: '💊' },
+    { id: 'group2', name: '의사', icon: '💉' },
 ];
 
 const MOCK_USERS = [
